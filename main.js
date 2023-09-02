@@ -513,7 +513,7 @@ function objToString(obj) {
 
 function dice(num) {
   if (num === 0) {
-    return "0: dead, 1: wounded, 2: injured, 3: fatigued, 4: layman, 5: trained, 6: veteran, 7: master";
+    return "helper<br>0: dead, 1: wounded, 2: injured, 3: fatigued, 4: layman, 5: trained, 6: veteran, 7: master 8: peak human 9: super human";
   }
   return Math.floor(Math.random() * num) + 1;
 }
