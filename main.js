@@ -511,12 +511,19 @@ function objToString(obj) {
   return result;
 }
 
+function dice(num) {
+  if (num === 0) {
+    return "0: dead, 1: wounded, 2: injured, 3: fatigued, 4: layman, 5: trained, 6: veteran, 7: master";
+  }
+  return Math.floor(Math.random() * num) + 1;
+}
+
 async function main() {
   let time = 0;
 
   while (true) {
     let text = await view(
-      "Please insert command:<br>1. init<br>2. game<br>3. quit"
+      "Please insert command:<br>1. init<br>2. game<br>3. quit<br>any other input will be a dice roll"
     );
 
     if (text == "quit") {
@@ -527,7 +534,7 @@ async function main() {
     } else if (text == "game") {
       await view(objToString(play(TYOV)));
     } else {
-      await view("wrong command");
+      await view(dice(parseInt(text)));
     }
     time += 1;
   }
