@@ -425,7 +425,7 @@ let TYOV = {
     "You translate yourself into a higher plane. What does this mean? The game is over.",
 };
 
-function play(game) {
+function play(game, charInfo = {}) {
   function randomRoll(dictionary) {
     function rollDice() {
       return (
@@ -460,7 +460,13 @@ function play(game) {
     return out;
   }
 
-  return randomRoll(game);
+  let out = {};
+
+  out = randomRoll(game);
+
+  out["0"] = charInfo;
+
+  return out;
 }
 
 async function view(info) {
@@ -520,6 +526,7 @@ function dice(num) {
 
 async function main() {
   let time = 0;
+  let charInfo = "";
 
   while (true) {
     let text = await view(
@@ -530,9 +537,9 @@ async function main() {
       await view("thank you for playing");
       break;
     } else if (text == "init") {
-      await view(objToString(createChar));
+      charInfo = await view(objToString(createChar));
     } else if (text == "game") {
-      await view(objToString(play(TYOV)));
+      await view(objToString(play(TYOV, charInfo)));
     } else {
       await view(dice(parseInt(text)));
     }
