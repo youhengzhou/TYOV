@@ -911,23 +911,81 @@ function RPGGuides() {
 
   const randomCastle = castle[Math.floor(Math.random() * castle.length)];
 
-  const randomMaleName =
-    maleNames[Math.floor(Math.random() * maleNames.length)];
+  const randomPlace = `${randomColor} ${randomCoatOfArms}  ${randomLastName} ${randomCastle} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
-  const randomFemaleName =
-    femaleNames[Math.floor(Math.random() * femaleNames.length)];
+  const randomPerson0 = `${
+    maleNames[Math.floor(Math.random() * maleNames.length)]
+  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+    [...posPersonality, ...negPersonality][
+      Math.floor(
+        Math.random() * (posPersonality.length + negPersonality.length)
+      )
+    ]
+  } ${role[Math.floor(Math.random() * role.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
-  const randomBody = body[Math.floor(Math.random() * body.length)];
-  const randomPersonality = [...posPersonality, ...negPersonality][
-    Math.floor(Math.random() * (posPersonality.length + negPersonality.length))
-  ];
-  const randomRole = role[Math.floor(Math.random() * role.length)];
-  const potential = Math.ceil(Math.random() * 12);
-  const base = Math.ceil(Math.random() * 4);
+  const randomPerson1 = `${
+    maleNames[Math.floor(Math.random() * maleNames.length)]
+  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+    [...posPersonality, ...negPersonality][
+      Math.floor(
+        Math.random() * (posPersonality.length + negPersonality.length)
+      )
+    ]
+  } ${role[Math.floor(Math.random() * role.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
-  const randomPlace = `${randomColor} ${randomCoatOfArms}  ${randomLastName} ${randomCastle} ${potential} ${base}`;
+  const randomPerson2 = `${
+    maleNames[Math.floor(Math.random() * maleNames.length)]
+  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+    [...posPersonality, ...negPersonality][
+      Math.floor(
+        Math.random() * (posPersonality.length + negPersonality.length)
+      )
+    ]
+  } ${role[Math.floor(Math.random() * role.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
-  const randomPerson = `${randomMaleName} ${randomFemaleName} ${randomLastName} ${randomBody}  ${randomPersonality} ${randomRole} ${potential} ${base}`;
+  const randomPerson3 = `${
+    femaleNames[Math.floor(Math.random() * femaleNames.length)]
+  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+    [...posPersonality, ...negPersonality][
+      Math.floor(
+        Math.random() * (posPersonality.length + negPersonality.length)
+      )
+    ]
+  } ${role[Math.floor(Math.random() * role.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
+
+  const randomPerson4 = `${
+    femaleNames[Math.floor(Math.random() * femaleNames.length)]
+  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+    [...posPersonality, ...negPersonality][
+      Math.floor(
+        Math.random() * (posPersonality.length + negPersonality.length)
+      )
+    ]
+  } ${role[Math.floor(Math.random() * role.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
+
+  const randomPerson5 = `${
+    femaleNames[Math.floor(Math.random() * femaleNames.length)]
+  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+    [...posPersonality, ...negPersonality][
+      Math.floor(
+        Math.random() * (posPersonality.length + negPersonality.length)
+      )
+    ]
+  } ${role[Math.floor(Math.random() * role.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
   out = {
     color,
@@ -946,7 +1004,12 @@ function RPGGuides() {
     mountain,
     castle,
     randomPlace,
-    randomPerson,
+    randomPerson0,
+    randomPerson1,
+    randomPerson2,
+    randomPerson3,
+    randomPerson4,
+    randomPerson5,
   };
 
   return out;
