@@ -875,13 +875,6 @@ function RPGGuides() {
     "feast hall",
   ];
 
-  const randomColor = color[Math.floor(Math.random() * color.length)];
-
-  const randomCoatOfArms =
-    coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)];
-
-  const randomLocation = terrain[Math.floor(Math.random() * terrain.length)];
-
   const randomTundra = tundra[Math.floor(Math.random() * tundra.length)];
 
   const randomPlains = plains[Math.floor(Math.random() * plains.length)];
@@ -909,13 +902,43 @@ function RPGGuides() {
   const randomLastName =
     lastNames[Math.floor(Math.random() * lastNames.length)];
 
-  const randomCastle = castle[Math.floor(Math.random() * castle.length)];
+  const randomPlace0 = `${color[Math.floor(Math.random() * color.length)]} ${
+    coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
+  }  ${randomLastName} ${
+    castle[Math.floor(Math.random() * castle.length)]
+  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
 
-  const randomPlace = `${randomColor} ${randomCoatOfArms}  ${randomLastName} ${randomCastle} ${Math.ceil(
-    Math.random() * 12
-  )} ${Math.ceil(Math.random() * 4)}`;
+  const randomPlace1 = `${color[Math.floor(Math.random() * color.length)]} ${
+    coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
+  }  ${randomLastName} ${
+    castle[Math.floor(Math.random() * castle.length)]
+  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
 
-  const randomPerson0 = `${
+  const randomPlace2 = `${color[Math.floor(Math.random() * color.length)]} ${
+    coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
+  }  ${randomLastName} ${
+    castle[Math.floor(Math.random() * castle.length)]
+  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+
+  const randomPlace3 = `${color[Math.floor(Math.random() * color.length)]} ${
+    coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
+  }  ${randomLastName} ${
+    castle[Math.floor(Math.random() * castle.length)]
+  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+
+  const randomPlace4 = `${color[Math.floor(Math.random() * color.length)]} ${
+    coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
+  }  ${randomLastName} ${
+    castle[Math.floor(Math.random() * castle.length)]
+  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+
+  const randomPlace5 = `${color[Math.floor(Math.random() * color.length)]} ${
+    coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
+  }  ${randomLastName} ${
+    castle[Math.floor(Math.random() * castle.length)]
+  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+
+  const randomPerson = `${
     maleNames[Math.floor(Math.random() * maleNames.length)]
   } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
     [...posPersonality, ...negPersonality][
@@ -1003,7 +1026,12 @@ function RPGGuides() {
     desert,
     mountain,
     castle,
-    randomPlace,
+    randomPlace0,
+    randomPlace1,
+    randomPlace2,
+    randomPlace3,
+    randomPlace4,
+    randomPlace5,
     randomPerson0,
     randomPerson1,
     randomPerson2,
