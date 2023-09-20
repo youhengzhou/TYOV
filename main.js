@@ -524,22 +524,290 @@ function dice(num) {
   return Math.floor(Math.random() * num) + 1;
 }
 
+function RPGGuides() {
+  color = [
+    "red",
+    "blue",
+    "green",
+    "yellow",
+    "purple",
+    "orange",
+    "white",
+    "black",
+    "grey",
+    "gold",
+    "silver",
+  ];
+
+  coat_of_arms = [
+    "rose",
+    "thistle",
+    "tulip",
+    "daisy",
+    "orchid",
+    "sunflower",
+    "lily",
+    "violet",
+    "iris",
+    "poppy",
+    "lion",
+    "dove",
+    "raven",
+    "dog",
+    "fish",
+    "bear",
+    "wolf",
+    "eagle",
+    "horse",
+    "deer",
+    "sword",
+    "bow and arrow",
+    "spear",
+    "axe",
+    "dagger",
+    "mace",
+    "flail",
+    "halberd",
+    "crossbow",
+    "lance",
+    "arrowhead",
+    "cross",
+    "moon",
+    "sun",
+    "mountain",
+    "river",
+    "castle",
+    "city",
+    "coin",
+    "chalice",
+  ];
+
+  body = [
+    "v short",
+    "short",
+    "medium",
+    "long",
+    "v tall",
+    "tall",
+    "v thin",
+    "thin",
+    "chubby",
+    "gaunt",
+    "v muscular",
+    "muscular",
+    "v athletic",
+    "athletic",
+    "brawny",
+    "v strong",
+    "strong",
+    "weak",
+  ];
+
+  posPersonality = [
+    "chaste",
+    "temperance",
+    "generous",
+    "diligent",
+    "kind",
+    "calm",
+    "humble",
+    "patient",
+    "content",
+    "forgiving",
+    "gregarious",
+    "honest",
+    "just",
+    "trusting",
+    "zealous",
+    "innocent",
+    "stubborn",
+    "pragmatic",
+    "mature",
+    "serious",
+  ];
+
+  negPersonality = [
+    "lustful",
+    "gluttonous",
+    "greedy",
+    "lazy",
+    "envious",
+    "wrathful",
+    "arrogant",
+    "impatient",
+    "ambitious",
+    "vengeful",
+    "shy",
+    "deceitful",
+    "arbitrary",
+    "paranoid",
+    "cynical",
+    "jaded",
+    "fickle",
+    "eccentric",
+    "childish",
+    "playful",
+  ];
+
+  role = ["dip", "mil", "mct", "sub", "lrn"];
+
+  terrain = [
+    "tundra",
+    "plains",
+    "forests",
+    "steppes",
+    "eastern mountains",
+    "deserts",
+  ];
+
+  tundra = [
+    "Snowfall",
+    "Winterhold",
+    "Frostwind",
+    "Icepeak",
+    "Whitewall",
+    "Silverstream",
+    "Coldharbor",
+    "Snowflake",
+    "Glacier",
+    "Frostfire",
+  ];
+
+  plains = [
+    "Goldcrest",
+    "Riverdale",
+    "Greenfield",
+    "Stonebridge",
+    "Rosewood",
+    "Sunset",
+    "Lakeshore",
+    "Oakvale",
+    "Ironforge",
+    "Brighton",
+  ];
+
+  forest = [
+    "Starfall",
+    "Moonlight",
+    "Dawnbreak",
+    "Nightfall",
+    "Sunrise",
+    "Twilight",
+    "Midnight",
+    "Duskwood",
+    "Daydream",
+    "Nightmare",
+  ];
+
+  steppes = [
+    "Redrock",
+    "Bloodriver",
+    "Firestorm",
+    "Blazefield",
+    "Flameheart",
+    "Burningsand",
+    "Ashland",
+    "Scorchedearth",
+    "Searingwind",
+    "Inferno",
+  ];
+
+  eastern = [
+    "Dragonheart",
+    "Dragonclaw",
+    "Dragonscale",
+    "Dragonbone",
+    "Dragonfire",
+    "Dragonwing",
+    "Dragontail",
+    "Dragonfang",
+    "Dragonblood",
+    "Dragoneye",
+  ];
+
+  desert = [
+    "Oasis",
+    "Mirage",
+    "Anemone",
+    "Dune",
+    "Canyon",
+    "Sphinx",
+    "Nile",
+    "Golden",
+    "Khufu",
+    "Ankh",
+  ];
+
+  mountain = [
+    "Skyreach",
+    "Cloudrest",
+    "Highpeak",
+    "Snowcap",
+    "Everest",
+    "Kota",
+    "Makalu",
+    "Lhotse",
+    "Cho Oyu",
+    "Manaslu",
+  ];
+
+  castle = [
+    "great hall",
+    "royal retreat",
+    "mystic tower",
+    "armory",
+    "forge",
+    "dungeon",
+    "great vault",
+    "library",
+    "observatory",
+    "hidden passage",
+    "cathedral",
+    "gardens",
+    "knights hall",
+    "feast hall",
+  ];
+
+  out = [
+    color,
+    coat_of_arms,
+    body,
+    posPersonality,
+    negPersonality,
+    role,
+    terrain,
+    tundra,
+    plains,
+    forest,
+    steppes,
+    eastern,
+    desert,
+    mountain,
+    castle,
+  ]
+
+  return out;
+}
+
 async function main() {
   let time = 0;
   let charInfo = "";
 
   while (true) {
     let text = await view(
-      "Please insert command:<br>1. init<br>2. game<br>3. quit<br>any other input will be a dice roll"
+      "Please insert command:<br>1. init<br>2. game<br>3. rpg guides<br>4. quit<br>any other input will be a dice roll"
     );
 
-    if (text == "quit") {
+    if (text == "4") {
       await view("thank you for playing");
       break;
-    } else if (text == "init") {
+    } else if (text == "1") {
       charInfo = await view(objToString(createChar));
-    } else if (text == "game") {
+    } else if (text == "2") {
       await view(objToString(play(TYOV, charInfo)));
+    } else if (text == "3") {
+      await view(RPGGuides());
+    }
     } else {
       await view(dice(parseInt(text)));
     }
