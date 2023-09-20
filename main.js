@@ -807,7 +807,6 @@ async function main() {
       await view(objToString(play(TYOV, charInfo)));
     } else if (text == "3") {
       await view(RPGGuides());
-    }
     } else {
       await view(dice(parseInt(text)));
     }
