@@ -938,7 +938,7 @@ function RPGGuides() {
     castle[Math.floor(Math.random() * castle.length)]
   } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
 
-  const randomPerson = `${
+  const randomPerson0 = `${
     maleNames[Math.floor(Math.random() * maleNames.length)]
   } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
     [...posPersonality, ...negPersonality][
