@@ -875,72 +875,115 @@ function RPGGuides() {
     "feast hall",
   ];
 
-  const randomTundra = tundra[Math.floor(Math.random() * tundra.length)];
-
-  const randomPlains = plains[Math.floor(Math.random() * plains.length)];
-
-  const randomForest = forest[Math.floor(Math.random() * forest.length)];
-
-  const randomSteppes = steppes[Math.floor(Math.random() * steppes.length)];
-
-  const randomEastern = eastern[Math.floor(Math.random() * eastern.length)];
-
-  const randomDesert = desert[Math.floor(Math.random() * desert.length)];
-
-  const randomMountain = mountain[Math.floor(Math.random() * mountain.length)];
-
-  const lastNames = [
-    randomTundra,
-    randomPlains,
-    randomForest,
-    randomSteppes,
-    randomEastern,
-    randomDesert,
-    randomMountain,
-  ];
-
-  const randomLastName =
-    lastNames[Math.floor(Math.random() * lastNames.length)];
-
   const randomPlace0 = `${color[Math.floor(Math.random() * color.length)]} ${
     coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
-  }  ${randomLastName} ${
-    castle[Math.floor(Math.random() * castle.length)]
-  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+  }  ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${castle[Math.floor(Math.random() * castle.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
   const randomPlace1 = `${color[Math.floor(Math.random() * color.length)]} ${
     coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
-  }  ${randomLastName} ${
-    castle[Math.floor(Math.random() * castle.length)]
-  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+  }  ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${castle[Math.floor(Math.random() * castle.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
   const randomPlace2 = `${color[Math.floor(Math.random() * color.length)]} ${
     coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
-  }  ${randomLastName} ${
-    castle[Math.floor(Math.random() * castle.length)]
-  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+  }  ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${castle[Math.floor(Math.random() * castle.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
   const randomPlace3 = `${color[Math.floor(Math.random() * color.length)]} ${
     coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
-  }  ${randomLastName} ${
-    castle[Math.floor(Math.random() * castle.length)]
-  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+  }  ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${castle[Math.floor(Math.random() * castle.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
   const randomPlace4 = `${color[Math.floor(Math.random() * color.length)]} ${
     coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
-  }  ${randomLastName} ${
-    castle[Math.floor(Math.random() * castle.length)]
-  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+  }  ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${castle[Math.floor(Math.random() * castle.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
   const randomPlace5 = `${color[Math.floor(Math.random() * color.length)]} ${
     coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)]
-  }  ${randomLastName} ${
-    castle[Math.floor(Math.random() * castle.length)]
-  } ${Math.ceil(Math.random() * 12)} ${Math.ceil(Math.random() * 4)}`;
+  }  ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${castle[Math.floor(Math.random() * castle.length)]} ${Math.ceil(
+    Math.random() * 12
+  )} ${Math.ceil(Math.random() * 4)}`;
 
   const randomPerson0 = `${
     maleNames[Math.floor(Math.random() * maleNames.length)]
-  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+  } ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${body[Math.floor(Math.random() * body.length)]}  ${
     [...posPersonality, ...negPersonality][
       Math.floor(
         Math.random() * (posPersonality.length + negPersonality.length)
@@ -952,7 +995,17 @@ function RPGGuides() {
 
   const randomPerson1 = `${
     maleNames[Math.floor(Math.random() * maleNames.length)]
-  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+  } ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${body[Math.floor(Math.random() * body.length)]}  ${
     [...posPersonality, ...negPersonality][
       Math.floor(
         Math.random() * (posPersonality.length + negPersonality.length)
@@ -964,7 +1017,17 @@ function RPGGuides() {
 
   const randomPerson2 = `${
     maleNames[Math.floor(Math.random() * maleNames.length)]
-  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+  } ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${body[Math.floor(Math.random() * body.length)]}  ${
     [...posPersonality, ...negPersonality][
       Math.floor(
         Math.random() * (posPersonality.length + negPersonality.length)
@@ -976,7 +1039,17 @@ function RPGGuides() {
 
   const randomPerson3 = `${
     femaleNames[Math.floor(Math.random() * femaleNames.length)]
-  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+  } ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${body[Math.floor(Math.random() * body.length)]}  ${
     [...posPersonality, ...negPersonality][
       Math.floor(
         Math.random() * (posPersonality.length + negPersonality.length)
@@ -988,7 +1061,17 @@ function RPGGuides() {
 
   const randomPerson4 = `${
     femaleNames[Math.floor(Math.random() * femaleNames.length)]
-  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+  } ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${body[Math.floor(Math.random() * body.length)]}  ${
     [...posPersonality, ...negPersonality][
       Math.floor(
         Math.random() * (posPersonality.length + negPersonality.length)
@@ -1000,7 +1083,17 @@ function RPGGuides() {
 
   const randomPerson5 = `${
     femaleNames[Math.floor(Math.random() * femaleNames.length)]
-  } ${randomLastName} ${body[Math.floor(Math.random() * body.length)]}  ${
+  } ${
+    [
+      tundra[Math.floor(Math.random() * tundra.length)],
+      plains[Math.floor(Math.random() * plains.length)],
+      forest[Math.floor(Math.random() * forest.length)],
+      steppes[Math.floor(Math.random() * steppes.length)],
+      eastern[Math.floor(Math.random() * eastern.length)],
+      desert[Math.floor(Math.random() * desert.length)],
+      mountain[Math.floor(Math.random() * mountain.length)],
+    ][Math.floor(Math.random() * 7)]
+  } ${body[Math.floor(Math.random() * body.length)]}  ${
     [...posPersonality, ...negPersonality][
       Math.floor(
         Math.random() * (posPersonality.length + negPersonality.length)
