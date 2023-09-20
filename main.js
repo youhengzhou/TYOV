@@ -1049,7 +1049,7 @@ async function main() {
 
   while (true) {
     let text = await view(
-      "Please insert command:<br>1. init<br>2. game<br>3. rpg guides<br>4. quit<br>any other input will be a dice roll"
+      "Please insert command:<br>1. init<br>2. game<br>3. rpg generators<br>4. quit<br>any other input will be a dice roll"
     );
 
     if (text == "4") {
