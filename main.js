@@ -448,7 +448,7 @@ function play(game, charInfo = {}) {
 
     let roll = 0;
     while (roll <= 80) {
-      roll = updateRoll(roll, 2);
+      roll = updateRoll(roll, 0);
       let part = assignPart(countsOfRoll, roll);
 
       // This code snippet checks if the variable part is a key in the dictionary.
@@ -580,6 +580,113 @@ function RPGGuides() {
     "city",
     "coin",
     "chalice",
+  ];
+
+  maleNames = [
+    "William",
+    "Henry",
+    "Richard",
+    "John",
+    "Robert",
+    "Geoffrey",
+    "Simon",
+    "Peter",
+    "Hugh",
+    "Roger",
+    "Ralph",
+    "Nicholas",
+    "Philip",
+    "Thomas",
+    "Walter",
+    "Gilbert",
+    "Alan",
+    "Adam",
+    "Stephen",
+    "Edmund",
+    "Benedict",
+    "Arnold",
+    "Baldwin",
+    "Bartholomew",
+    "Bernard",
+    "Cecil",
+    "Clarence",
+    "Clement",
+    "Cornelius",
+    "Cuthbert",
+    "Edgar",
+    "Edwin",
+    "Elias",
+    "Francis",
+    "Frederick",
+    "Gerald",
+    "Gregory",
+    "Humphrey",
+    "Jeremiah",
+    "Julian",
+    "Lawrence",
+    "Leonard",
+    "Maurice",
+    "Nathaniel",
+    "Norman",
+    "Oswald",
+    "Randolph",
+    "Raymond",
+    "Reginald",
+    "Roland",
+    "Sampson",
+    "Theobald",
+    "Victor",
+    "Vincent",
+    "Wilfred",
+  ];
+
+  femaleNames = [
+    "Adelina",
+    "Agnes",
+    "Avice",
+    "Beatrice",
+    "Cecily",
+    "Clara",
+    "Constance",
+    "Diana",
+    "Edith",
+    "Eleanor",
+    "Elizabeth",
+    "Emma",
+    "Eva",
+    "Felicia",
+    "Florence",
+    "Gisela",
+    "Helen",
+    "Ida",
+    "Isabella",
+    "Joan",
+    "Juliana",
+    "Katherine",
+    "Laura",
+    "Lucia",
+    "Margaret",
+    "Maria",
+    "Matilda",
+    "Maud",
+    "Millicent",
+    "Nesta",
+    "Nicola",
+    "Petronilla",
+    "Philippa",
+    "Richenda",
+    "Rohesia",
+    "Rosalind",
+    "Sarah",
+    "Susanna",
+    "Sybil",
+    "Theophania",
+    "Ursula",
+    "Valentina",
+    "Willelma",
+    "Xenia",
+    "Yolanda",
+    "Zita",
   ];
 
   body = [
@@ -768,7 +875,61 @@ function RPGGuides() {
     "feast hall",
   ];
 
-  out = [
+  const randomColor = color[Math.floor(Math.random() * color.length)];
+
+  const randomCoatOfArms =
+    coat_of_arms[Math.floor(Math.random() * coat_of_arms.length)];
+
+  const randomLocation = terrain[Math.floor(Math.random() * terrain.length)];
+
+  const randomTundra = tundra[Math.floor(Math.random() * tundra.length)];
+
+  const randomPlains = plains[Math.floor(Math.random() * plains.length)];
+
+  const randomForest = forest[Math.floor(Math.random() * forest.length)];
+
+  const randomSteppes = steppes[Math.floor(Math.random() * steppes.length)];
+
+  const randomEastern = eastern[Math.floor(Math.random() * eastern.length)];
+
+  const randomDesert = desert[Math.floor(Math.random() * desert.length)];
+
+  const randomMountain = mountain[Math.floor(Math.random() * mountain.length)];
+
+  const lastNames = [
+    randomTundra,
+    randomPlains,
+    randomForest,
+    randomSteppes,
+    randomEastern,
+    randomDesert,
+    randomMountain,
+  ];
+
+  const randomLastName =
+    lastNames[Math.floor(Math.random() * lastNames.length)];
+
+  const randomCastle = castle[Math.floor(Math.random() * castle.length)];
+
+  const randomMaleName =
+    maleNames[Math.floor(Math.random() * maleNames.length)];
+
+  const randomFemaleName =
+    femaleNames[Math.floor(Math.random() * femaleNames.length)];
+
+  const randomBody = body[Math.floor(Math.random() * body.length)];
+  const randomPersonality = [...posPersonality, ...negPersonality][
+    Math.floor(Math.random() * (posPersonality.length + negPersonality.length))
+  ];
+  const randomRole = role[Math.floor(Math.random() * role.length)];
+  const potential = Math.ceil(Math.random() * 12);
+  const base = Math.ceil(Math.random() * 4);
+
+  const randomPlace = `${randomColor} ${randomCoatOfArms}  ${randomLastName} ${randomCastle} ${potential} ${base}`;
+
+  const randomPerson = `${randomMaleName} ${randomFemaleName} ${randomLastName} ${randomBody}  ${randomPersonality} ${randomRole} ${potential} ${base}`;
+
+  out = {
     color,
     coat_of_arms,
     body,
@@ -784,7 +945,9 @@ function RPGGuides() {
     desert,
     mountain,
     castle,
-  ]
+    randomPlace,
+    randomPerson,
+  };
 
   return out;
 }
@@ -806,7 +969,7 @@ async function main() {
     } else if (text == "2") {
       await view(objToString(play(TYOV, charInfo)));
     } else if (text == "3") {
-      await view(RPGGuides());
+      await view(objToString(RPGGuides()));
     } else {
       await view(dice(parseInt(text)));
     }
